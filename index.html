@@ -4,8 +4,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-   
-   
+    <link >
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,7 @@
         <div class="input-wrapper">
           <label for="cc-number">Número do Cartão:</label>
 
-          <input id="cc-number" type="text" placeholder="**** **** **** ****" />
+          <input id="cc-number" type="text" placeholder="**** **** **** ****"  required/>
         </div>
 
         <div class="input-wrapper">
@@ -33,7 +33,11 @@
             id="cc-holder"
             type="text"
             placeholder="Digite o nome como está no cartão"
-          />
+            required  />
+           <div class="warning">
+            <img src="https://i.ibb.co/8sKccC8/Warning.png" alt="icone de alerta">
+            Nome do titular é obrigatório
+           </div>
         </div>
 
         <div class="col-2 flex"> 
@@ -43,17 +47,32 @@
       id="cc-validity"
       type="text"
       placeholder="mm/aa"
+      required
     />
           </div>
           <div class="input-wrapper">      
-            <label class="flex help" for="cc-cvv">CVC</label>
+            <label class="flex help" for="cc-cvv">CVC
+<img src="https://i.ibb.co/zV3MG3W/Vector.png"
+alt="ícone de ajuda"
+title="Esse número está, geralmente, nas costas do seu cartão">
+            </label>
 
-            <input  id="cc-cvv" type="text"   name="cvc" placeholder="***"  size="3" maxlength="3" required>
+            <input  id="cc-cvv" type="text"   placeholder="***" >
               
         </div>
       </section>
+      <section class="info-security flex">
+       
+          <img src="https://i.ibb.co/4fJ8sxY/Vector-1.png"
+          alt="ícone de segurança"
+         >
+          Seus dados estão seguros
+       
+      </section>
+      <button>Adicionar Cartão</button>
     </form>
-    
+    <script src="https://unpkg.com/imask"></script>
+    <script src="/main.js"></script>
   </body>
   </html>
 

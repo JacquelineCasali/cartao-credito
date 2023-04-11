@@ -29,7 +29,7 @@ form {
   width: 32.8rem;
   height: 21.2rem;
   perspective: 60rem;
-  margin: 30px 0 0 30px;
+  margin: 0 0 0 30px;
 }
 
 #credit-card > div {
@@ -81,6 +81,8 @@ label {
   font-weight: 600;
   font-size: 1.4rem;
   /* color: #e5e7eb; */
+  gap: 0.4rem;
+  align-items: center;
 }
 input {
   margin-top: 0.4rem;
@@ -90,12 +92,28 @@ input {
   border: 0.1rem solid #374151;
   /* background: #111827; */
   border-radius: 0.4rem;
-  color: #f3f4f6;
+  /* color: #f3f4f6; */
 }
 
 input:focus {
   /* coloca a cor da borda roxa quando clica */
   outline: 0.15rem solid #9333ea;
+}
+
+input:invalid:focus {
+  border: 0.15rem solid #fb7185;
+}
+input + .warning {
+  display: none;
+}
+
+input:invalid:focus + .warning {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+  color: #fb7185;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .col-2 {
@@ -106,6 +124,38 @@ input:focus {
 .col-2 .input-wrapper:nth-child(2) {
   flex-basis: 40%;
   gap: 2.4rem;
+}
+
+.help img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.info-security {
+  margin-top: 4.8rem;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+}
+
+button {
+  margin-top: 10rem;
+  border: 0;
+  padding: 1.6rem;
+  width: 100%;
+  background: #9333ea;
+  box-shadow: 0rem 0.4rem 1.6rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.4rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #f9fafb;
+  cursor: pointer;
+  /* transição de fundo  */
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #a855f7;
 }
 
 /* Daqui para baixo celular grande ou tablet ou maior*/
