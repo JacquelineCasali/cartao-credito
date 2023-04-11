@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  font-size: 62.5%;
+}
+/* body {
+  background: #1f2937;
+} */
+
+body,
+input,
+button {
+  font-size: 1.6rem;
+  font-family: " Source Sans Pro ", sans-serif;
+}
+
+form {
+  padding: 2.4rem;
+  max-width: 40rem;
+  margin: auto;
+}
+
+#credit-card {
+  width: 32.8rem;
+  height: 21.2rem;
+  perspective: 60rem;
+  margin: 30px 0 0 30px;
+}
+
+#credit-card > div {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  /* transição do cartão */
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#credit-card .front {
+  background: url(https://i.ibb.co/Z84b9s8/frente-cartao.png) no-repeat;
+  transform: rotateY(0);
+}
+
+#credit-card .back {
+  background: url(https://i.ibb.co/y0qGB7Q/2023-04-10-182847.png) no-repeat;
+  transform: rotateY(-180deg);
+}
+#credit-card:active .front,
+#credit-card:hover .front {
+  /* rotaciona o cartão */
+  transform: rotateY(180deg);
+}
+#credit-card:active .back,
+#credit-card:hover .back {
+  transform: rotateY(0);
+}
+
+/* para formartar a posição dos inputs */
+.flex {
+  display: flex;
+}
+
+.inputs {
+  margin-top: 4.8rem;
+  /* posição do input junto com o flex */
+  flex-direction: column;
+  /* distancia entre os inputs */
+  gap: 2.4rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  /* color: #e5e7eb; */
+}
+input {
+  margin-top: 0.4rem;
+  width: 100%;
+  font-family: "Source Sans Pro";
+  padding: 1.2rem;
+  border: 0.1rem solid #374151;
+  /* background: #111827; */
+  border-radius: 0.4rem;
+  color: #f3f4f6;
+}
+
+input:focus {
+  /* coloca a cor da borda roxa quando clica */
+  outline: 0.15rem solid #9333ea;
+}
+
+.col-2 {
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.col-2 .input-wrapper:nth-child(2) {
+  flex-basis: 40%;
+  gap: 2.4rem;
+}
+
+/* Daqui para baixo celular grande ou tablet ou maior*/
+/* 460px para cima */
+
+/* Daqui para baixo tablet grande ou computador ou maior*/
+@media (min-width: 460px) {
+  /* adicionar cartao */
+}
+
+/* Daqui para baixo tablet grande ou computador ou maior*/
+@media (min-width: 769px) {
+  /* adicionar endereço */
+}
