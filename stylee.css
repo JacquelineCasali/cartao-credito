@@ -70,7 +70,7 @@ form {
 }
 
 .inputs {
-  margin-top: 4.8rem;
+  margin-top: 3.8rem;
   /* posição do input junto com o flex */
   flex-direction: column;
   /* distancia entre os inputs */

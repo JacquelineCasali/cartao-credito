@@ -14,23 +14,23 @@
   </head>
   <body>
     <!-- tela lado direito -->
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="" id="form" >
       <section id="credit-card">
         <div class="front"></div>
         <div class="back"></div>
       </section>
       <section class="inputs flex">
         <div class="input-wrapper">
-          <label for="cc-number">Número do Cartão:</label>
+          <label for="number">Número do Cartão:</label>
 
-          <input id="cc-number" type="text" placeholder="**** **** **** ****"  required/>
+          <input id="number" type="text" placeholder="**** **** **** ****"  required/>
         </div>
 
         <div class="input-wrapper">
-          <label for="cc-holder">Nome do Titular:</label>
+          <label for="holder">Nome do Titular:</label>
 
           <input
-            id="cc-holder"
+            id="holder"
             type="text"
             placeholder="Digite o nome como está no cartão"
             required  />
@@ -42,12 +42,12 @@
 
         <div class="col-2 flex"> 
           <div class="input-wrapper">      
-      <label for="cc-validity"> Validade do Cartão</label>
+      <label for="validity"> Validade do Cartão</label>
       <input
-      id="cc-validity"
+      id="validity"
       type="text"
       placeholder="mm/aa"
-      required
+      
     />
           </div>
           <div class="input-wrapper">      
@@ -57,7 +57,7 @@ alt="ícone de ajuda"
 title="Esse número está, geralmente, nas costas do seu cartão">
             </label>
 
-            <input  id="cc-cvv" type="text"   placeholder="***" >
+            <input  id="cc-cvv" type="text"   placeholder="***" required>
               
         </div>
       </section>
@@ -69,7 +69,7 @@ title="Esse número está, geralmente, nas costas do seu cartão">
           Seus dados estão seguros
        
       </section>
-      <button>Adicionar Cartão</button>
+      <button type="submit" class="adicionar">Adicionar Cartão</button>
     </form>
     <script src="https://unpkg.com/imask"></script>
     <script src="/main.js"></script>
@@ -80,23 +80,9 @@ title="Esse número está, geralmente, nas costas do seu cartão">
           
            
     
-      <!--  
-      
      
-     
-   </div>
 
 
 
 
 
-
-</form>        
- 
-
-   
-
-
-</section> -->
-  </body>
-</html>
